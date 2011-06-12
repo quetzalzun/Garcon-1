@@ -1,4 +1,0 @@
-DROP DATABASE IF EXISTS garcon;
-CREATE DATABASE garcon DEFAULT CHARACTER SET UTF8;
-
-GRANT ALL PRIVILEGES ON garcon.* TO 'garcon'@'localhost' IDENTIFIED BY 'somecoolpassword';
