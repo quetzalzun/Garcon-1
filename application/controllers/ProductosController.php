@@ -12,6 +12,27 @@ class ProductosController extends Zend_Controller_Action
     {
     }
 
+    public function editAction()
+    {
+        // action body
+    }
+
+    public function deleteAction()
+    {
+        // action body
+    }
+
+    public function addAction()
+    {
+        // action body
+    }
+
 
 }
+
+
+
+
+
+
 
