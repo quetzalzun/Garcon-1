@@ -1,0 +1,2 @@
+INSERT INTO clientes (nombre, correo, telefono, clave)
+VALUES ('Carlos A. Gonzalez', 'betology@gmail.com', '33 33 33 33 33', 'siMeVeo');
