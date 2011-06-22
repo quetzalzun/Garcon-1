@@ -1,0 +1,17 @@
+use garcon;
+
+set names utf8;
+truncate productos;
+
+insert into productos values( null, 'Coca-Cola', 'Botella de 500 ml (vidrio)', 15, 24 );
+insert into productos values( null, 'Mirinda', 'Lata de 355 ml', 10, 24 );
+insert into productos values( null, 'Manzanita Sol', 'Lata de 355 ml', 10, 24 );
+insert into productos values( null, '7-UP', 'Lata de 355 ml', 10, 24 );
+insert into productos values( null, 'Peñafiel', 'Botella de 600 ml (plástico)', 10, 24 );
+insert into productos values( null, 'Café', 'Vaso de 12 oz.', 10, 0 );
+insert into productos values( null, 'Cerveza Corona Extra Clara', 'Botella 355 ml', 15, 24 );
+insert into productos values( null, 'Cerveza Corona Extra Obscura', 'Botella 355 ml', 15, 24 );
+insert into productos values( null, 'Muffins', 'Muffins de plátano', 5, 12 );
+insert into productos values( null, 'SpaghettiCabal Chico', 'Spaghetti con salsa ragu y carne', 25, 0 );
+insert into productos values( null, 'SpaghettiCabal', 'Spaghetti con salsa ragu y carne', 40, 0 );
+insert into productos values( null, 'SpaghettiCabal Grande', 'Spaghetti con salsa ragu y carne', 60, 0 );
