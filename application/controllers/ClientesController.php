@@ -10,8 +10,8 @@ class ClientesController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        $albums = new Application_Model_DbTable_Albums();
-        $this->view->albums = $albums->fetchAll(); 
+        $albums = new Application_Model_DbTable_Clientes();
+        $this->view->clientes = $clientes->fetchAll(); 
     }
 
     public function addAction()

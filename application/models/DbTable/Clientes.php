@@ -5,7 +5,7 @@ class Application_Model_DbTable_Clientes extends Zend_Db_Table_Abstract
 
     protected $_name = 'clientes';
 
-    public function getAlbum($id)
+    public function getCliente($id)
     {
         $id = (int)$id;
         $row = $this->fetchRow('id = ' . $id);
@@ -15,7 +15,7 @@ class Application_Model_DbTable_Clientes extends Zend_Db_Table_Abstract
         return $row->toArray();
     }
 
-    public function addAlbum($nombre, $correo, $telefono, $clave)
+    public function addCliente($nombre, $correo, $telefono, $clave)
     {
         $data = array(
             'nombre' => $nombre,
@@ -26,7 +26,7 @@ class Application_Model_DbTable_Clientes extends Zend_Db_Table_Abstract
             $this->insert($data);
     } 
 
-    public function updateAlbum($nombre, $correo, $telefono, $clave)
+    public function updateCliente($nombre, $correo, $telefono, $clave)
     {
         $data = array(
             'nombre' => $nombre,
@@ -37,10 +37,9 @@ class Application_Model_DbTable_Clientes extends Zend_Db_Table_Abstract
             $this->update($data, 'id = '. (int)$id);
     } 
 
-    public function deleteAlbum($id)
+    public function deleteCliente($id)
     {
         this->delete('id =' . (int)$id);
     }
 
 }
-
