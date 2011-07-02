@@ -9,6 +9,7 @@ footer {
     text-align: right;
 }
 
-table#ProductosTabla th {
+table#ProductosTabla thead th {
+    text-align: left;
     width: 20%;
 }
