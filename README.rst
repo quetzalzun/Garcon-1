@@ -16,4 +16,5 @@ Procedimiento
 * Crea un branch llamado "productos"
 * Trabaja en el branch del grupo correspondiente.
 
-Brindamos un script en el branch de "productos" para generar la DB y el usuario correspondiente.
+Brindamos un script en el branch "master" para generar el usuario correspondiente.
+También, en el branch "productos", están los scripts de tabla de productos y productos de prueba.
