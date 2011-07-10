@@ -1,0 +1,12 @@
+Descripción
+===========
+
+Scripts utilizables en el proyecto:
+
+db.mysql
+========
+Destruye la DB garcon si existe. Crea una DB y un usuario llamados "garcon"; el password del usuario es "somecoolpassword"
+
+productos.mysql
+===============
+Crea la tabla de productos en Gracon

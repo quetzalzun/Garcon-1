@@ -1,4 +1,22 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Productos</b> and script/action name <b>index</b></p>
-</div>
+<table id="ProductosTabla" >
+    <thead>
+        <th>Artículo</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Existencia</th>
+        <th colspan="2">Comandos</th>
+    </thead>
+
+    <tbody>
+<?php foreach ( $this->productos as $producto ) : ?>
+        <tr>
+            <td><?php echo $this->escape($producto->nombre); ?></td>
+            <td><?php echo $this->escape($producto->descripcion); ?></td>
+            <td><?php echo $this->escape($producto->precio); ?></td>
+            <td><?php echo $this->escape($producto->existencia); ?></td>
+            <td>editar</td>
+            <td>borrar</td>
+        </tr>
+<?php endforeach; ?>
+    </tbody>
+</table>

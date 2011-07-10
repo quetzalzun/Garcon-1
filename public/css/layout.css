@@ -1,0 +1,15 @@
+header {
+}
+
+content {
+}
+
+footer {
+    margin-top: 2em;
+    text-align: right;
+}
+
+table#ProductosTabla thead th {
+    text-align: left;
+    width: 20%;
+}
