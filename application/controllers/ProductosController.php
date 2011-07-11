@@ -10,6 +10,8 @@ class ProductosController extends Zend_Controller_Action
 
     public function indexAction()
     {
+    	$productos = new Application_Model_DbTable_Productos();
+    	$this->view->productos = $productos->fetchAll();
     }
 
     public function editAction()
@@ -26,13 +28,4 @@ class ProductosController extends Zend_Controller_Action
     {
         // action body
     }
-
-
 }
-
-
-
-
-
-
-
