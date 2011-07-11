@@ -39,7 +39,7 @@ class Application_Model_DbTable_Clientes extends Zend_Db_Table_Abstract
 
     public function deleteCliente($id)
     {
-        this->delete('id =' . (int)$id);
+        $this->delete('id =' . (int)$id);
     }
 
 }
