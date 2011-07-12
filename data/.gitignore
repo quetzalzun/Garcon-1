@@ -1,0 +1,9 @@
+*
+!.gitignore
+!databases/
+!cache/
+!indexes/
+!locales/
+!logs/
+!sessions/
+!uploads/
