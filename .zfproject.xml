@@ -22,7 +22,9 @@
           <actionMethod actionName="add"/>
         </controllerFile>
       </controllersDirectory>
-      <formsDirectory enabled="false"/>
+      <formsDirectory>
+        <formFile formName="Productos"/>
+      </formsDirectory>
       <layoutsDirectory enabled="false"/>
       <modelsDirectory>
         <dbTableDirectory>
