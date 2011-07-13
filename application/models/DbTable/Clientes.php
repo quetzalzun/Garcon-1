@@ -15,24 +15,24 @@ class Application_Model_DbTable_Clientes extends Zend_Db_Table_Abstract
         return $row->toArray();
     }
 
-    public function addCliente($nombre, $correo, $telefono, $clave)
+    public function addCliente($nombre, $email, $telefono, $clave)
     {
         $data = array(
             'nombre' => $nombre,
-            'correo' => $correo,
+            'email' => $email,
             'telefono' => $telefono,
-            'clave' => $title,
+            'clave' => $clave,
             );
             $this->insert($data);
     } 
 
-    public function updateCliente($nombre, $correo, $telefono, $clave)
+    public function updateCliente($nombre, $email, $telefono, $clave)
     {
         $data = array(
             'nombre' => $nombre,
-            'correo' => $correo,
+            'email' => $email,
             'telefono' => $telefono,
-            'clave' => $title,
+            'clave' => $clave,
             );
             $this->update($data, 'id = '. (int)$id);
     } 
@@ -41,5 +41,4 @@ class Application_Model_DbTable_Clientes extends Zend_Db_Table_Abstract
     {
         $this->delete('id =' . (int)$id);
     }
-
 }

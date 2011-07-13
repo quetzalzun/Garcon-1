@@ -1,8 +1,8 @@
 <table id="ProductosTabla" >
     <thead>
         <th>Nombre</th>
-        <th>Correo</th>
-        <th>Telefono</th>
+        <th>Email</th>
+        <th>Teléfono</th>
         <th colspan="2">Comandos</th>
     </thead>
 
@@ -10,7 +10,7 @@
 <?php foreach ( $this->clientes as $cliente ) : ?>
         <tr>
             <td><?php echo $this->escape($cliente->nombre); ?></td>
-            <td><?php echo $this->escape($cliente->correo); ?></td>
+            <td><?php echo $this->escape($cliente->email); ?></td>
             <td><?php echo $this->escape($cliente->telefono); ?></td>
             <td>editar</td>
             <td>borrar</td>
