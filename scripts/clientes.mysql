@@ -1,11 +1,14 @@
+set names utf8;
 use garcon;
 
+DROP TABLE IF EXISTS clientes;
+
 CREATE TABLE `clientes` (
-      `id` int(7) NOT NULL AUTO_INCREMENT,
-      `nombre` varchar(75) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
-      `correo` varchar(75) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
-      `telefono` varchar(30) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
-      `clave` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+      `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
+      `nombre` varchar(75) NOT NULL DEFAULT '',
+      `email` varchar(100) NOT NULL DEFAULT '',
+      `telefono` varchar(12) NOT NULL DEFAULT '',
+      `clave` varchar(40) NOT NULL DEFAULT '',
       PRIMARY KEY (`id`),
       UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
