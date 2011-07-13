@@ -14,8 +14,8 @@
             <td><?php echo $this->escape($producto->descripcion); ?></td>
             <td><?php echo $this->escape($producto->precio); ?></td>
             <td><?php echo $this->escape($producto->existencia); ?></td>
-            <td>editar</td>
-            <td>borrar</td>
+            <td><a href="<?php echo $this->url( array( 'controller' => 'productos', 'action' => 'edit', 'id' => $producto->id) ); ?>" >editar</a></td>
+            <td><a href="<?php echo $this->url( array( 'controller' => 'productos', 'action' => 'delete', 'id' => $producto->id) ); ?>" >borrar</a></td>
         </tr>
 <?php endforeach; ?>
     </tbody>
