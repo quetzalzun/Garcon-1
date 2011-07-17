@@ -9,12 +9,12 @@ class Application_Form_Productos extends Zend_Form
     	$id = new Zend_Form_Element_Hidden( 'id' );
     	$id->addFilter( 'Int' );
 
-    	$articulo = new Zend_Form_Element_Text( 'articulo' );
-    	$articulo->setLabel( 'Artículo' )
-                 ->setRequired( 'true' )
-                 ->addFilter( 'StripTags' )
-                 ->addFilter( 'StringTrim' )
-                 ->addValidator( 'NotEmpty' );
+    	$nombre = new Zend_Form_Element_Text( 'nombre' );
+    	$nombre->setLabel( 'Artículo' )
+               ->setRequired( 'true' )
+               ->addFilter( 'StripTags' )
+               ->addFilter( 'StringTrim' )
+               ->addValidator( 'NotEmpty' );
 
     	$descripcion = new Zend_Form_Element_Text( 'descripcion' );
     	$descripcion->setLabel( 'Descripción' )
@@ -42,7 +42,7 @@ class Application_Form_Productos extends Zend_Form
     	$enviar->setAttrib( 'id', 'botonEnviar' );
 
     	$this->addElements( 
-    	    array( $id, $articulo, $descripcion, $precio, $existencia, $enviar ) 
+    	    array( $id, $nombre, $descripcion, $precio, $existencia, $enviar ) 
     	);
     }
 }
