@@ -10,7 +10,7 @@ class Application_Form_Productos extends Zend_Form
     	$id->addFilter( 'Int' );
 
     	$nombre = new Zend_Form_Element_Text( 'nombre' );
-    	$nombre->setLabel( 'Artículo' )
+    	$nombre->setLabel( 'Nombre' )
                ->setRequired( 'true' )
                ->addFilter( 'StripTags' )
                ->addFilter( 'StringTrim' )
