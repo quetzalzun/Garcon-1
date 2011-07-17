@@ -16,10 +16,33 @@ class Application_Form_Productos extends Zend_Form
                  ->addFilter( 'StringTrim' )
                  ->addValidator( 'NotEmpty' );
 
-    	$descripcion =
+    	$descripcion = new Zend_Form_Element_Text( 'descripcion' );
+    	$descripcion->setLabel( 'Descripción' )
+    	            ->setRequired( 'true' )
+    	            ->addFilter( 'StripTags' )
+    	            ->addFilter( 'StringTrim' )
+    	            ->addValidator( 'NotEmpty' );
 
-    	$precio =
+    	$precio = new Zend_Form_Element_Text( 'precio' );
+    	$precio->setLabel( 'Precio' )
+    	       ->setRequired( 'true' )
+    	       ->addFilter( 'StripTags' )
+    	       ->addFilter( 'StringTrim' )
+    	       ->addValidator( 'NotEmpty' )
+    	       ->addValidator( 'Float' );
 
-    	$existencia =
+    	$existencia = new Zend_Form_Element_Text( 'existencia' );
+    	$existencia->setLabel( 'Existencia' )
+    	           ->setRequired( 'true' )
+    	           ->addFilter( 'StripTags' )
+    	           ->addFilter( 'StringTrim' )
+    	           ->addValidator( 'NotEmpty' );
+    	
+    	$enviar = new Zend_Form_Element_Submit( 'enviar' );
+    	$enviar->setAttrib( 'id', 'botonEnviar' );
+
+    	$this->addElements( 
+    	    array( $id, $articulo, $descripcion, $precio, $existencia, $enviar ) 
+    	);
     }
 }
