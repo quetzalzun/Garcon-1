@@ -2,12 +2,9 @@
 
 class Application_Model_DbTable_Productos extends Zend_Db_Table_Abstract 
 {  
-
     protected $_name = 'productos';
 
-
-
-    public function getProductos($id)
+    public function getProducto($id)
     {
         $id = (int)$id;
         $row = $this->fetchRow('id = ' . $id);
@@ -15,11 +12,11 @@ class Application_Model_DbTable_Productos extends Zend_Db_Table_Abstract
         if (!$row) {
             throw new Exception("No puede encontrar el registro $id");
         }
-         return $row->toArray;
-
+        
+        return $row->toArray();
      }
 
-     public function addProductos($name, $description, $price, $quantity)
+     public function addProducto($name, $description, $price, $quantity)
      {
          $data = array(
          'name' => $name,
@@ -30,7 +27,7 @@ class Application_Model_DbTable_Productos extends Zend_Db_Table_Abstract
           $this->insert($data);
       }
 
-      public function updateProductos($id, $name, $price, $quantity)
+      public function updateProducto($id, $name, $price, $quantity)
       {
           $data = array(
           'name' => $name,
@@ -42,7 +39,7 @@ class Application_Model_DbTable_Productos extends Zend_Db_Table_Abstract
           $this->update($data, 'id = '. (int)$id);
       }
 
-     public function deleteProductos($id)
+     public function deleteProducto($id)
      {
           $this->delete('id =' . (int)$id);
      }
