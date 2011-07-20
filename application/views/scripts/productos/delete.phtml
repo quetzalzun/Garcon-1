@@ -1,4 +1,15 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Productos</b> and script/action name <b>delete</b></p>
-</div>
+<?php
+$this->title = 'Borrar producto';
+$this->headTitle( $this->title );
+?>
+<p>
+    No mames! El producto: '<?php echo $this->producto['nombre']; ?>' va a morir! 
+    Estás seguro de cómo te llamas y porqué estás aquí?
+</p>
+<form action="<?php echo $this->url( array( 'action'=>'delete' ) ); ?>" method="post">
+    <div>
+        <input type="hidden" name="id" value="<?php echo $this->producto['id']; ?>" />
+        <input type="submit" name="borrar" value="Sí" />
+        <input type="submit" name="borrar" value="No" />
+    </div>
+</form>
