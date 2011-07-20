@@ -84,6 +84,30 @@ class ProductosController extends Zend_Controller_Action
 
     public function addAction()
     {
-        // action body
+    	// Agregar forma y ponerle un botón de guardar.
+    	$forma = new Application_Form_Productos();
+    	$forma->enviar->setLabel( 'Agregar' );
+    	$this->view->forma = $forma;
+
+    	if ( $this->getRequest()->isPost() ) {
+    		$datos = $this->getRequest()->getPost();
+
+    		if ( $forma->isValid($datos) ) {
+    			// asignar los valores de la forma a variables
+    			$nombre = $forma->getValue( 'nombre' );
+    			$descripcion = $forma->getValue( 'descripcion' );
+    			$precio = $forma->getValue( 'precio' );
+    			$existencia = $forma->getValue( 'existencia' );
+
+    			// actualizar los datos
+    			$productos = new Application_Model_DbTable_Productos();
+    			$productos->addProducto( $nombre, $descripcion, $precio, $existencia );
+
+    			// redirigir al index
+    			$this->_helper->redirector( 'index' );
+            } else {
+            	$form->populate( $datos );
+            }
+        }
     }
 }
