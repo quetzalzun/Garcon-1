@@ -14,6 +14,9 @@
         <controllerFile controllerName="Error"/>
         <controllerFile controllerName="Clientes">
           <actionMethod actionName="index"/>
+          <actionMethod actionName="add"/>
+          <actionMethod actionName="edit"/>
+          <actionMethod actionName="delete"/>
         </controllerFile>
         <controllerFile controllerName="Productos">
           <actionMethod actionName="index"/>
@@ -55,6 +58,15 @@
           <viewControllerScriptsDirectory forControllerName="Productos">
             <viewScriptFile forActionName="add"/>
           </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Clientes">
+            <viewScriptFile forActionName="add"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Clientes">
+            <viewScriptFile forActionName="edit"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Clientes">
+            <viewScriptFile forActionName="delete"/>
+          </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>
@@ -94,6 +106,9 @@
           </testApplicationControllerFile>
           <testApplicationControllerFile forControllerName="Clientes">
             <testApplicationActionMethod forActionName="index"/>
+            <testApplicationActionMethod forActionName="add"/>
+            <testApplicationActionMethod forActionName="edit"/>
+            <testApplicationActionMethod forActionName="delete"/>
           </testApplicationControllerFile>
           <testApplicationControllerFile forControllerName="Productos">
             <testApplicationActionMethod forActionName="index"/>

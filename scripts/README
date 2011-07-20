@@ -9,4 +9,8 @@ Destruye la DB garcon si existe. Crea una DB y un usuario llamados "garcon"; el 
 
 productos.mysql
 ===============
-Crea la tabla de productos en Gracon
+Crea la tabla de productos en garcon
+
+clientes.mysql
+==============
+Crea la tabla de clientes en la base de datos garcon

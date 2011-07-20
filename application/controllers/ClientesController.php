@@ -10,9 +10,33 @@ class ClientesController extends Zend_Controller_Action
 
     public function indexAction()
     {
+        $clientes= new Application_Model_DbTable_Clientes();
+        $this->view->clientes = $clientes->fetchAll(); 
+    }
+
+    public function addAction()
+    {
+        // action body
+    }
+
+    public function editAction()
+    {
+        // action body
+    }
+
+    public function deleteAction()
+    {
         // action body
     }
 
 
 }
+
+
+
+
+
+
+
+
 
