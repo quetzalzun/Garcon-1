@@ -38,7 +38,7 @@ class ProductosController extends Zend_Controller_Action
     			// redirigir al index
     			$this->_helper->redirector( 'index' );
             } else {
-            	$form->populate( $datos );
+            	$forma->populate( $datos );
             }
         } else {
         	$id = $this->_getParam( 'id', 0 );
@@ -106,7 +106,7 @@ class ProductosController extends Zend_Controller_Action
     			// redirigir al index
     			$this->_helper->redirector( 'index' );
             } else {
-            	$form->populate( $datos );
+            	$forma->populate( $datos );
             }
         }
     }
