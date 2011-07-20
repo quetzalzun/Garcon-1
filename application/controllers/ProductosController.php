@@ -25,6 +25,19 @@ class ProductosController extends Zend_Controller_Action
     		$datos = $this->getRequest()->getPost();
 
     		if ( $forma->isValid($datos) ) {
+    			// asignar los valores de la forma a variables
+    			$id = (int) $forma->getValue( 'id' );
+    			$nombre = $forma->getValue( 'nombre' );
+    			$descripcion = $forma->getValue( 'descripcion' );
+    			$precio = $forma->getValue( 'precio' );
+    			$existencia = $forma->getValue( 'existencia' );
+
+    			// actualizar los datos
+    			$productos = new Application_Model_DbTable_Productos();
+    			$productos->updateProducto( $id, $nombre, $descripcion, $precio, $existencia );
+
+    			// redirigir al index
+    			$this->_helper->redirector( 'index' );
             } else {
             	$form->populate( $datos );
             }
