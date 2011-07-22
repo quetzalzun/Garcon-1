@@ -9,8 +9,16 @@ class ProductosController extends Zend_Controller_Action
 
     public function indexAction()
     {
+        // instanciar el modelo (tabla de productos)
     	$productos = new Application_Model_DbTable_Productos();
-    	$this->view->productos = $productos->fetchAll( null, 'nombre ASC' );
+
+        // generar el select
+        $select = $productos->select()
+                            ->from( $productos )
+                            ->order( 'nombre ASC', 'descripcion ASC' );
+
+        // asignar resultado a una variable de la vista
+    	$this->view->productos = $productos->fetchAll( $select );
     }
 
     public function editAction()
