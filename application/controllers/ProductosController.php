@@ -10,7 +10,7 @@ class ProductosController extends Zend_Controller_Action
     public function indexAction()
     {
     	$productos = new Application_Model_DbTable_Productos();
-    	$this->view->productos = $productos->fetchAll();
+    	$this->view->productos = $productos->fetchAll( null, 'nombre ASC' );
     }
 
     public function editAction()
