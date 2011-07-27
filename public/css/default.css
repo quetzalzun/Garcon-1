@@ -4,5 +4,5 @@ table#ProductosTabla thead tr {
 
 table#ProductosTabla tbody tr:hover {
 	background: #ffa;
-	cursor: pointer;
+	cursor:     default;
 }
