@@ -34,6 +34,7 @@ class AutentificacionController extends Zend_Controller_Action
 
         $auth = Zend_Auth::getInstance();
         $result = $auth->authenticate( $adapter );
+        
         if ( $result->isValid() ) {
             $user = $adapter->getResultRowObject();
             $auth->getStorage()->write( $user );
@@ -48,7 +49,7 @@ class AutentificacionController extends Zend_Controller_Action
         $dbAdapter = Zend_Db_Table::getDefaultAdapter();
         $authAdapter = new Zend_Auth_Adapter_DbTable( $dbAdapter );
 
-        $authAdapter->setTableName( 'usuarios' )
+        $authAdapter->setTableName( 'clientes' )
                     ->setIdentityColumn( 'email' )
                     ->setCredentialColumn( 'clave' )
                     ->setCredentialTreatment( 'SHA1( CONCAT( ?, condimento ) )' );
