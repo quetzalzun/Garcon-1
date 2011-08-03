@@ -10,7 +10,8 @@ class AutentificacionController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+    	$forma = new Application_Form_Login();
+    	$this->view->forma = $forma;
     }
 
 
