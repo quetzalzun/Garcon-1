@@ -7,7 +7,7 @@ class Application_Form_Login extends Zend_Form
         $this->setName( "login" );
         $this->setMethod( 'post' );
              
-        $this->addElement( 'text', 'usuario', 
+        $this->addElement( 'text', 'email', 
             array(
                 'filters'    => array( 'StringTrim', 'StringToLower' ),
                 'validators' => 
@@ -16,7 +16,7 @@ class Application_Form_Login extends Zend_Form
                     ),
             
                 'required'   => true,
-                'label'      => 'Usuario:',
+                'label'      => 'Email:',
             )
         );
 

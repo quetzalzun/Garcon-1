@@ -8,7 +8,8 @@ CREATE TABLE `clientes` (
       `nombre` varchar(75) NOT NULL DEFAULT '',
       `email` varchar(100) NOT NULL DEFAULT '',
       `telefono` varchar(12) NOT NULL DEFAULT '',
-      `clave` varchar(40) NOT NULL DEFAULT '',
+      `clave` varchar(80) NOT NULL DEFAULT '',
+      `condimento` varchar(40) NOT NULL DEFAULT '',
       PRIMARY KEY (`id`),
       UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
