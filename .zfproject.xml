@@ -24,9 +24,13 @@
           <actionMethod actionName="delete"/>
           <actionMethod actionName="add"/>
         </controllerFile>
+        <controllerFile controllerName="Autentificacion">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Productos"/>
+        <formFile formName="Login"/>
       </formsDirectory>
       <layoutsDirectory enabled="false"/>
       <modelsDirectory>
@@ -66,6 +70,9 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Clientes">
             <viewScriptFile forActionName="delete"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Autentificacion">
+            <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
@@ -115,6 +122,9 @@
             <testApplicationActionMethod forActionName="edit"/>
             <testApplicationActionMethod forActionName="delete"/>
             <testApplicationActionMethod forActionName="add"/>
+          </testApplicationControllerFile>
+          <testApplicationControllerFile forControllerName="Autentificacion">
+            <testApplicationActionMethod forActionName="index"/>
           </testApplicationControllerFile>
         </testApplicationControllerDirectory>
       </testApplicationDirectory>
