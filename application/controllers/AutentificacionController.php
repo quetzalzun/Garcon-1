@@ -14,8 +14,8 @@ class AutentificacionController extends Zend_Controller_Action
         $request = $this->getRequest();
 
         if ( $request->isPost() ) {
-            if ( $form->isValid( $request->getPost() ) ) {
-                if ( $this->_process( $form->getValues() ) ) {
+            if ( $forma->isValid( $request->getPost() ) ) {
+                if ( $this->_process( $forma->getValues() ) ) {
                     // We're authenticated! Redirect to the home page
                     $this->_helper->redirector('index', 'index');
                 }
