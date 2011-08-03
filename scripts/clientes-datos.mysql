@@ -3,13 +3,15 @@ use garcon;
 
 TRUNCATE clientes;
 
+SET @condimento = SHA1( 'LinuxCabal y PHP rulean, esos' );
+
 INSERT 
-    INTO clientes (nombre, email, telefono, clave)
+    INTO clientes (nombre, email, telefono, clave, condimento)
 VALUES 
-    ('Carlos A. Gonzalez', 'betology@gmail.com', '523333333333', sha1( 'password' ) ),
-    ('Renich Bon Ciric', 'renich@woralelandia.com', '523315894554', sha1( 'password' ) ),
-    ('Jacobo Salomón Preciado Preciado', 'jacsalomon@yahoo.com', '523333313425', sha1( 'password' ) ),
-    ('Esteban Enael Contreras Vázquez', 'quetzalzun@gmail.com', '523333301712', sha1( 'password' ) ),
-    ('Juan Demerutis Martínez', 'minoxfilm@gmail.com', '523338123503', sha1( 'password' ) ),
-    ('Richard Raymond Couture', 'rrc@linuxcabal.org', '523331452638', sha1( 'password' )
+    ('Carlos A. Gonzalez', 'betology@gmail.com', '523333333333', sha1( 'password' ), "@condimento" ),
+    ('Renich Bon Ciric', 'renich@woralelandia.com', '523315894554', sha1( 'password' ), @condimento ),
+    ('Jacobo Salomón Preciado Preciado', 'jacsalomon@yahoo.com', '523333313425', sha1( 'password' ), @condimento ),
+    ('Esteban Enael Contreras Vázquez', 'quetzalzun@gmail.com', '523333301712', sha1( 'password' ), @condimento ),
+    ('Juan Demerutis Martínez', 'minoxfilm@gmail.com', '523338123503', sha1( 'password' ), @condimento ),
+    ('Richard Raymond Couture', 'rrc@linuxcabal.org', '523331452638', sha1( 'password' ), @condimento )
 );
