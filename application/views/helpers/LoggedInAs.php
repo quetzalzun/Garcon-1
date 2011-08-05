@@ -4,37 +4,37 @@ class Zend_View_Helper_LoggedInAs extends Zend_View_Helper_Abstract
 {
     public function loggedInAs ()
     {
-        $auth = Zend_Auth::getInstance();
+        $autentificacion = Zend_Auth::getInstance();
         
-        if ( $auth->hasIdentity() ) {
-            $username = $auth->getIdentity()->username;
+        if ( $autentificacion->hasIdentity() ) {
+            $usuario = $autentificacion->getIdentity()->nombre;
             $logoutUrl = $this->view->url( 
                 array( 
-                    'controller' => 'auth',
+                    'controller' => 'autentificacion',
                     'action'     => 'logout'
                 ), 
                 null, 
                 true
             );
             
-            return 'Welcome ' . $username .  '. <a href="'.$logoutUrl.'">Logout</a>';
+            return 'Bienvenido ' . $usuario .  '. <a href="'.$logoutUrl.'">Logout</a>';
         }
 
         $request = Zend_Controller_Front::getInstance()->getRequest();
         $controller = $request->getControllerName();
         $action = $request->getActionName();
         
-        if( $controller == 'auth' && $action == 'index' ) {
+        if( $controller == 'autentificacion' && $action == 'index' ) {
             return '';
         }
         
         $loginUrl = $this->view->url(
             array(
-                'controller'    => 'auth', 
+                'controller'    => 'autentificacion', 
                 'action'        => 'index'
             )
         );
         
-        return '<a href="'.$loginUrl.'">Login</a>';
+        return '<a href="'.$loginUrl.'">Entrar</a>';
     }
 }
