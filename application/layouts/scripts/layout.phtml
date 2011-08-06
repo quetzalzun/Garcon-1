@@ -38,6 +38,11 @@ $this->headTitle( $request->getControllerName() );
             <div id="BreadCrumbs">
                 <span><?php echo $this->navigation()->breadcrumbs()->setMinDepth( 0 ); ?></span>
             </div>
+            
+            <!-- Login -->
+            <div id="Login">
+<?php echo $this->LoggedInAs(); ?>
+            </div>
         </div>
 
         <!-- Content container -->
