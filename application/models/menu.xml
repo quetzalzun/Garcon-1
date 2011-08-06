@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <nav>
+        <inicio>
+            <label>inicio</label>
+            <controller>index</controller>
+            <action>index</action>
+            <title>ir al inicio</title>
+            <order>-100</order>
+        </inicio>
+        
+        <adquirir>
+            <label>adquirir</label>
+            <controller>movimientos</controller>
+            <action>adquirir</action>
+            <title>adquirir algún producto</title>
+            <order>0</order>
+        </adquirir>
+        
+        <donar>
+            <label>donar</label>
+            <controller>movimientos</controller>
+            <action>donar</action>
+            <title>hacer donaciones</title>
+            <order>1</order>
+        </donar>
+    </nav>
+</config>
