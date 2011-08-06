@@ -60,6 +60,6 @@ class AutentificacionController extends Zend_Controller_Action
     public function logoutAction()
     {
         Zend_Auth::getInstance()->clearIdentity();
-        $this->_helper->redirector( 'index' );
+        $this->_helper->redirector( 'index', 'index' );
     }
 }
