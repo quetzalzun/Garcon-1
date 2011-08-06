@@ -1,0 +1,27 @@
+<?php $this->placeholder('footer')->captureStart(); ?>
+<div id="footerLinks">
+    <small id="footerW3CDoctypeValidator">
+        <a href="http://validator.w3.org/check?uri=http://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']; ?>">XHTML1 Strict</a>
+    </small>
+
+    <small> | </small>
+
+    <small id="footerW3CCSSValidator">
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']; ?>">CSS 2.1</a>
+    </small>
+
+    <small> | </small>
+
+    <small id="footerZendFrameworkVersion">
+        <a href="http://zendframework.com/">ZF <?php echo Zend_Version::VERSION; ?></a>
+    </small>
+
+    <small> | </small>
+
+    <small id="footerDisclaimer">
+        <a href="http://gplv3.fsf.org/">GPLv3 <?php echo date('Y'); ?></a>
+    </small>
+
+    <small> | </small>
+</div><?php $this->placeholder('footer')->captureEnd(); ?>
+<?php echo $this->placeholder('footer')->setIndent(16); ?>
