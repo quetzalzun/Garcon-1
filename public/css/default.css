@@ -1,8 +1,0 @@
-table#ProductosTabla thead tr {
-	background: #aaf;
-}
-
-table#ProductosTabla tbody tr:hover {
-	background: #ffa;
-	cursor:     default;
-}
