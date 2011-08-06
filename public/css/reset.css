@@ -1,0 +1,13 @@
+body,html {
+    margin: 0 5px;
+    font-family: Verdana,sans-serif;
+}
+
+h1 {
+    font-size: 1.4em;
+    color: #080;
+}
+
+a {
+    color: #080;
+}

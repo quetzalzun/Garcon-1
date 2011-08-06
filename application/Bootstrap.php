@@ -35,8 +35,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
                          ->setIndent( 8 );
         
         // stylesheets & feeds (headLinks)
-        $view->headLink()->setStylesheet( '/css/layout.css', 'all' )
-                         ->appendStylesheet( '/css/default.css', 'all' )
+        $view->headLink()->setStylesheet( '/css/reset.css', 'all' )
+                         ->appendStylesheet( '/css/layout.css', 'all' )
+                         ->appendStylesheet( '/css/skin.css', 'all' )
                          ->appendStylesheet( '/css/menu.css', 'all' )
                          ->headLink(
                              array(
