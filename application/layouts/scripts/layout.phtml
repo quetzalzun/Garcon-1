@@ -1,10 +1,3 @@
-<?php
-
-// setting the controller and action name as title segments:
-$request = Zend_Controller_Front::getInstance()->getRequest();
-$this->headTitle( $request->getControllerName() );
-
-?>
 <?php echo $this->doctype() . "\n"; ?>
 <html>
     <head>
@@ -12,7 +5,7 @@ $this->headTitle( $request->getControllerName() );
 <?php echo $this->headMeta() . "\n"; ?>
 
         <!-- Title -->
-<?php echo ucwords( $this->headTitle() ) . "\n"; ?>
+<?php echo ucwords( $this->headTitle( $this->getControllerName() ) ) . "\n"; ?>
 
         <!-- CSS, Feeds y favicon -->
 <?php echo $this->headLink() . "\n"; ?>
@@ -38,12 +31,9 @@ $this->headTitle( $request->getControllerName() );
             <div id="BreadCrumbs">
                 <span><?php echo $this->navigation()->breadcrumbs()->setMinDepth( 0 ); ?></span>
             </div>
-            
-            <!-- Login -->
-            <div id="Login">
-<?php echo $this->LoggedInAs(); ?>
-            </div>
         </div>
+        
+        <h1><?php echo $this->getControllerName(); ?></h1>
 
         <!-- Content container -->
         <div id="Contenido">
