@@ -10,12 +10,15 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
     // vista
     protected function _initView()
-    {
+    {    
+        // inicializar vista
+        $view = new Zend_View();
+        
         // obtener configuración global
         $sitio = $this::getConfig( 'sitio' );
         
-        // inicializar vista
-        $view = new Zend_View();
+        // hacer $sitio disponible a la vista
+        $view->sitio = $sitio;
 
         // doctype
         $view->doctype( $sitio->doctype );
@@ -41,7 +44,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
                          ->appendStylesheet( '/css/menu.css', 'all' )
                          ->headLink(
                              array(
-                                'rel' => 'favicon',
+                                'rel' => 'shortcut icon',
                                 'href' => '/images/favicon.ico'
                             ),
                             'PREPEND'

@@ -1,7 +1,8 @@
 <?php echo $this->doctype() . "\n"; ?>
-<html>
+<html lang="<?php echo $this->sitio->lang; ?>">
     <head>
         <!-- Meta tags -->
+        <meta charset="<?php echo $this->sitio->encoding; ?>" />
 <?php echo $this->headMeta() . "\n"; ?>
 
         <!-- Title -->
