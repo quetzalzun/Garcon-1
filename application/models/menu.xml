@@ -14,7 +14,7 @@
             <controller>movimientos</controller>
             <action>adquirir</action>
             <title>adquirir algún producto</title>
-            <order>0</order>
+            <order>10</order>
         </adquirir>
         
         <donar>
@@ -22,7 +22,21 @@
             <controller>movimientos</controller>
             <action>donar</action>
             <title>hacer donaciones</title>
-            <order>1</order>
+            <order>20</order>
         </donar>
+        <clientes>
+            <label>clientes</label>
+            <controller>clientes</controller>
+            <action>index</action>
+            <title>editar clientes</title>
+            <order>30</order>
+        </clientes>
+        <productos>
+            <label>productos</label>
+            <controller>productos</controller>
+            <action>index</action>
+            <title>editar productos</title>
+            <order>40</order>
+        </productos>
     </nav>
 </config>
