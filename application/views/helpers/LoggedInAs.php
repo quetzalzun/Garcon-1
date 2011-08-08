@@ -17,7 +17,7 @@ class Zend_View_Helper_LoggedInAs extends Zend_View_Helper_Abstract
                 true
             );
             
-            return 'Bienvenido ' . $usuario .  '. <a href="'.$logoutUrl.'">Logout</a>';
+            return "<span>Bienvenido $usuario  <a href='$logoutUrl'>logout</a></span>";
         }
 
         $request = Zend_Controller_Front::getInstance()->getRequest();
@@ -30,11 +30,11 @@ class Zend_View_Helper_LoggedInAs extends Zend_View_Helper_Abstract
         
         $loginUrl = $this->view->url(
             array(
-                'controller'    => 'autentificacion', 
+                'controller'    => 'autentificacion',
                 'action'        => 'index'
             )
         );
         
-        return '<a href="'.$loginUrl.'">Entrar</a>';
+        return "<span><a href='$loginUrl'>entrar</a></span>";
     }
 }
