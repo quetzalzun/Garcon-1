@@ -1,0 +1,31 @@
+/* Menu */
+div#Menu {
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    margin-top: .5em;
+    text-align:right;
+}
+
+div#Menu a {
+    text-decoration: none;
+}
+
+div#Login,
+div#Login dl dt,
+div#Login dl dd {
+    display: inline-block;
+    margin: 0;
+}
+
+ul.nav {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+ul.nav li {
+    display: inline-block;
+    margin: 0 1em 0 1em;
+    text-decoration: none;
+}

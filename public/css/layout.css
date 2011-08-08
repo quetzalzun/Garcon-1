@@ -2,30 +2,13 @@
 header {
 }
 
-content {
+div#Contenido {
+    min-height: 400px;
 }
 
 footer {
     margin-top: 2em;
     text-align: right;
-}
-
-/* Menu */
-form#login dl { 
-    position: absolute; 
-    top: 0; 
-    right: 0;
-    text-align:right; 
-}
-
-form#login dl dt,
-form#login dl dd {
-    display: inline-block;
-    float: left;
-}
-
-form#login dl dd {
-    margin: 0;
 }
 
 /* Productos */
