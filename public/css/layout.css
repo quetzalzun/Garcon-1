@@ -12,8 +12,8 @@ footer {
 }
 
 /* Productos */
-table {
-    align: left;
+table#ProductosTabla {
+    text-align: left;
     margin: auto;
 }
 
