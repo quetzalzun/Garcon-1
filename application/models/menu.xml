@@ -24,6 +24,7 @@
             <title>hacer donaciones</title>
             <order>20</order>
         </donar>
+
         <clientes>
             <label>clientes</label>
             <controller>clientes</controller>
@@ -31,6 +32,7 @@
             <title>editar clientes</title>
             <order>30</order>
         </clientes>
+
         <productos>
             <label>productos</label>
             <controller>productos</controller>
