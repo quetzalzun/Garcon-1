@@ -27,6 +27,11 @@
         <controllerFile controllerName="Autentificacion">
           <actionMethod actionName="index"/>
         </controllerFile>
+        <controllerFile controllerName="Movimientos">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="adquirir"/>
+          <actionMethod actionName="donar"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Productos"/>
@@ -73,6 +78,15 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Autentificacion">
             <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Movimientos">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Movimientos">
+            <viewScriptFile forActionName="adquirir"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Movimientos">
+            <viewScriptFile forActionName="donar"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
@@ -125,6 +139,11 @@
           </testApplicationControllerFile>
           <testApplicationControllerFile forControllerName="Autentificacion">
             <testApplicationActionMethod forActionName="index"/>
+          </testApplicationControllerFile>
+          <testApplicationControllerFile forControllerName="Movimientos">
+            <testApplicationActionMethod forActionName="index"/>
+            <testApplicationActionMethod forActionName="adquirir"/>
+            <testApplicationActionMethod forActionName="donar"/>
           </testApplicationControllerFile>
         </testApplicationControllerDirectory>
       </testApplicationDirectory>
