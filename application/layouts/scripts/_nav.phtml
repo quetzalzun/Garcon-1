@@ -1,7 +1,10 @@
+<?php echo $this->placeholder( 'nav' )->captureStart(); ?>
 <!-- Login -->
 <div id="Login">
-<?php echo $this->LoggedInAs(); ?>
+    <?php echo $this->LoggedInAs() . "\n"; ?>
 </div>
 
 <!-- Menu -->
-<?php echo $this->navigation()->menu()->setUlClass( 'nav' )->setIndent( 20 ); ?>
+<?php echo $this->navigation()->menu()->setUlClass( 'nav' ); ?>
+<?php echo $this->placeholder( 'nav' )->captureEnd(); ?>
+<?php echo $this->placeholder( 'nav' )->setIndent( 16 ); ?>

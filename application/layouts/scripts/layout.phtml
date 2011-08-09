@@ -23,7 +23,7 @@
         <div id="Header">
 <?php echo $this->partial( '_header.phtml' ) . "\n"; ?>
 
-        <!-- Menu container -->
+            <!-- Menu container -->
             <div id="Menu">
 <?php echo $this->partial( '_nav.phtml' ) . "\n"; ?>
             </div>
@@ -33,11 +33,13 @@
                 <span><?php echo $this->navigation()->breadcrumbs()->setMinDepth( 0 ); ?></span>
             </div>
         </div>
-        
-        <h1><?php echo $this->getControllerName(); ?></h1>
 
         <!-- Content container -->
         <div id="Contenido">
+            <!-- Section Title -->
+            <h1><?php echo $this->getControllerName(); ?></h1>
+        
+            <!-- Content -->
 <?php echo $this->partial( '_contenido.phtml' ) . "\n"; ?>
         </div>
 
