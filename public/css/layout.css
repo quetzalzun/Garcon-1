@@ -1,7 +1,9 @@
+/* General */
 header {
 }
 
-content {
+div#Contenido {
+    min-height: 400px;
 }
 
 footer {
@@ -9,8 +11,9 @@ footer {
     text-align: right;
 }
 
-table {
-    align: left;
+/* Productos */
+table#ProductosTabla {
+    text-align: left;
     margin: auto;
 }
 

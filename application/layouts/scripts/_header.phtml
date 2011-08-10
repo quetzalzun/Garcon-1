@@ -1,0 +1,13 @@
+<?php 
+// get it's configuration file
+$site = new Zend_Config_Ini( APPLICATION_PATH . '/configs/sitio.ini', APPLICATION_ENV );
+
+$this->placeholder( 'header' )->captureStart(); ?>
+<div id="headerSitioNombre">
+    <h1><?php echo $site->name; ?></h1>
+</div>
+
+<div id="headerSitioSlogan">
+    <small><?php echo $site->slogan; ?></small>
+</div><?php $this->placeholder( 'header' )->captureEnd(); ?>
+<?php echo $this->placeholder( 'header' )->setIndent( 12 ); ?>
