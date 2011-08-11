@@ -1,0 +1,24 @@
+README
+======
+
+Configurando un VirtualHost en Apache
+======================================
+Es necesario que crees un VirtualHost; y que, el mismo, defina que el DocumentRoot sea la carpeta <proyecto>/public.
+También, es importante definir la variable de entorno APPLICATION_ENV como 'development' para que puedas ver los errores completos en la aplicación.
+
+El siguiente es un ejemplo de configuración
+
+<VirtualHost *:80>
+    DocumentRoot "/var/www/zf/garcon/public"
+    ServerName garcon.local
+
+    # This should be omitted in the production environment
+    SetEnv APPLICATION_ENV development
+
+    <Directory "/var/www/zf/garcon/public">
+        Options Indexes MultiViews FollowSymLinks
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
